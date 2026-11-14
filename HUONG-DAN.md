@@ -1,5 +1,19 @@
 # AI INNOVATION 2026 – Hướng dẫn cài đặt và vận hành (bản Supabase)
 
+## 0. Hệ thống đã được cài đặt sẵn
+
+| Mục | Địa chỉ |
+|---|---|
+| Địa chỉ app cho đảng viên | https://cubisung.github.io/ai-innovation-2026/ |
+| Mã nguồn | https://github.com/cubisung/ai-innovation-2026 |
+| Quản trị cơ sở dữ liệu | https://supabase.com/dashboard/project/fhmtbkwrewrdxyllktvy |
+
+Đã làm: tạo project Supabase (gói miễn phí, khu vực châu Á – Thái Bình Dương), chạy `001_schema.sql` và `002_storage.sql`, tắt xác nhận email, điền `config.js`, đưa app lên GitHub Pages và khai báo địa chỉ app trong Supabase.
+
+Việc đầu tiên cần làm: **người phụ trách đăng ký tài khoản với vai trò Cấp uỷ** tại địa chỉ app ở trên, trước khi gửi link cho đảng viên. Tài khoản đầu tiên được duyệt và xác nhận Cấp uỷ tự động; từ người thứ hai trở đi phải được Cấp uỷ duyệt trong menu Quản trị.
+
+Phần 1 dưới đây chỉ dùng khi cần cài lại từ đầu hoặc chuyển sang máy chủ khác.
+
 Bộ file gồm:
 
 | File | Nội dung |
@@ -10,7 +24,7 @@ Bộ file gồm:
 | `supabase/002_storage.sql` | Kho tệp minh chứng và quyền xem/tải |
 | `supabase/tests/` | Bộ kiểm thử phân quyền (dùng cho PostgreSQL thử nghiệm, không chạy trên Supabase thật) |
 
-## 1. Cài đặt (khoảng 15 phút)
+## 1. Cài đặt lại từ đầu (khi cần)
 
 1. Vào supabase.com, tạo tài khoản và một **project mới** (chọn khu vực Singapore).
 2. Mở **SQL Editor**, dán toàn bộ nội dung `supabase/001_schema.sql`, bấm Run. Làm tương tự với `supabase/002_storage.sql`.
